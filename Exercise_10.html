@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Chapter 6 Exercise 10</title>
+</head>
+
+<body>
+	<h1>Account Sign Up Form</h1>
+
+	<div id="message" style="color: red"></div><br>
+	<form class="form" name="sign_up_form" method="get" action="formProcessor.html">
+		Name: <input type="text" id="name" name="name"> <br><br>
+		Email: <input type="email" name="email"> <br><br>
+		Login Name: <input type="text" id="login" name="login"> <br><br>
+		Password: <input type="password" id="password" name="login"> <br><br>
+		Please retype your password: <input type="password" id="password_check" name="login"> <br><br>
+		<input type="submit" name="submit" value="Submit" onclick="return validate_form();"><br>
+	</form>
+	
+	<script>
+	"use strict";
+
+	function validate_form() {
+	
+		var loginName = document.getElementById("login");
+		var password = document.getElementById("password");
+		var reEnterPassword = document.getElementById("password_check");
+
+
+		//Login Name validation
+		if (document.getElementById("login").value.length === 0) {
+			document.getElementById("message").innerHTML = "Please enter your login name.";
+			return false;
+		}
+
+		//Password validation
+		if (document.getElementById("password").value.length === 0) {
+			document.getElementById("message").innerHTML = "Please enter your password.";
+			return false;	
+		}
+
+		if (document.getElementById("password_check").value.length === 0) {
+			document.getElementById("message").innerHTML = "Please enter your password again.";
+			return false;	
+		}
+
+		//Check if passwords match
+		if (password !== password_check) {
+			document.getElementById("message").innerHTML = "Passwords do not match. Please re-enter them.";
+			return false;
+		}
+
+		else {
+			return true;
+		}
+	}
+	</script>
+
+</body>
+</html>
