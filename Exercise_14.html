@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Chapter 6 Exercise 14</title>
+</head>
+
+
+
+
+<body>
+	<h1>User Profile Page </h1>
+
+	<form class="form" name="user_profile" method="get" action="formProcessor.html">
+
+
+		Name: <input type="text" id="name" name="name" onfocus= "nameFocus()" onblur = "nameBlur()">
+		<div id="name_message" style="display:none">This is your name input box.</div> <br><br>
+	
+
+		Email: <input type="email" id="email" name="email" onfocus= "emailFocus()" onblur = "emailBlur()">
+		<div id="email_message" style="display:none">This is your email input box.</div> <br><br>
+
+		Login Name: <input type="text" id="login" name="login" onfocus= "loginFocus()" onblur = "loginBlur()">
+		<div id="login_message" style="display:none">This is your login name input box.</div> <br><br>
+
+		Telephone: <input type="text" id="telephone" name="telephone" onfocus= "telephoneFocus()" onblur = "telephoneBlur()">
+		<div id="telephone_message" style="display:none">This is your telephone input box.</div> <br><br>	
+
+	</form>
+	
+	<script>
+
+	//name
+	function nameFocus() {
+		document.getElementById("name_message").style.display = "initial";
+	}
+
+	function nameBlur() {
+		document.getElementById("name_message").style.display = "none";
+	}
+
+	//email
+	function emailFocus() {
+		document.getElementById("email_message").style.display = "initial";
+	}
+
+	function emailBlur() {
+		document.getElementById("email_message").style.display = "none";
+	}
+
+	//login
+	function loginFocus() {
+		document.getElementById("login_message").style.display = "initial";
+	}
+
+	function loginBlur() {
+		document.getElementById("login_message").style.display = "none";
+	}
+
+	//telephone
+	function telephoneFocus() {
+		document.getElementById("telephone_message").style.display = "initial";
+	}
+
+	function telephoneBlur() {
+		document.getElementById("telephone_message").style.display = "none";
+	}
+
+	
+	
+	</script>
+
+</body>
+</html>
